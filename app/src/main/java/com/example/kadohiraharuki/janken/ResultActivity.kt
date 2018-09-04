@@ -45,7 +45,17 @@ class ResultActivity : AppCompatActivity() {
             1 -> resultLabel.setText(R.string.result_win)//勝利
             2 -> resultLabel.setText(R.string.result_lose)//敗北
         }
+
         backButton.setOnClickListener{finish()}
+
+    }
+    private fun Datasave(myHand:Int, comHand:Int, gameResult:Int){
+        val prefs = getSharedPreferences(PREFERENCES_KEY, AppCompatActivity.MODE_PRIVATE)
+        val memo : Int = prefs.getInt(DATA1_KEY)
+        val game_count:Int
+        val win_count:Int
+        val last_my_hand:Int
+        val last_last_com_hand:Int
 
     }
 }
